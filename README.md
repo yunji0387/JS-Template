@@ -53,8 +53,18 @@ console.log(req.params.postName);
 });
 ```
 #### find one of the key-value in a object array
-```javascript
-if(array.some(item => item.title === req.params.ItemName)){
-    console.log("Match Found");
-}
-```
+1. some()
+    - return type : boolean value
+    ```javascript
+    if(array.some(item => item.title === req.params.ItemName)){
+        console.log("Match Found");
+    }
+    ```
+2. find()
+    - return type : object
+    ```javascript
+    let foundItem = array.find(item => item.title === req.params.ItemName);
+    if(foundItem){
+        console.log(foundItem.title);
+    }
+    ```
