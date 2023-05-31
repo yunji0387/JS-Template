@@ -46,3 +46,15 @@ res.render("filename", {<var1 in ejs>: <var1 in js>, <var2 in ejs>: <var2 in js>
     return variable/object;
    };
    ```
+#### get the value in url
+```javascript
+app.get("/posts/:postName", function(req, res){
+console.log(req.params.postName);
+});
+```
+#### find one of the key-value in a object array
+```javascript
+if(array.some(item => item.title === req.params.ItemName)){
+    console.log("Match Found");
+}
+```
