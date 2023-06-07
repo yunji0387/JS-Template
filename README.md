@@ -1,7 +1,35 @@
 # NodeJS Template File
-### included libraries : express, body-parser, ejs
+### included libraries : express, body-parser, ejs, lodash, mongoose
 ### include request methods: get, post, listen
 ---
+### Initial project creation
+1. create a folder, and switch to the folder directory
+    ```bash
+      mkdir <folder name>
+    ```
+    ```bash
+      cd <folder name>
+    ```
+2. create required files (in the folder)
+    ```bash
+      touch app.js
+    ```
+    ```bash
+      mkdir views
+    ```
+    ```bash
+      cd views
+    ```
+    ```bash
+      touch home.ejs header.ejs footer.ejs
+    ```
+3. initialize npm and install required npm libraries (in the folder)
+    ```bash
+      npm init
+    ```
+    ```bash
+      npm i express body-parser ejs lodash mongoose
+    ```
 ### other useful functions
 #### render specific ejs files in nodejs request function
 ```javascript
