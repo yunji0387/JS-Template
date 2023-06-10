@@ -135,6 +135,7 @@ console.log(req.params.postName);
         res.on("data", function(data){
             const weatherData = JSON.parse(data); // JSON.parse will convert the response data from hex format to json format
             console.log(weatherData);
+            //JSON.stringify(weatherData); //this will turn weatherData from object to string
         });
     });
 ```
