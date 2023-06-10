@@ -128,6 +128,7 @@ console.log(req.params.postName);
    ```
 #### using https get request
 ```javascript
+    const https = require("https"); //make sure to include library, it is a built-in nodejs library so we don't have to npm install it.
     const exampleAPI_URL = "https://api.exampleapi.com/key?=value";
     https.get(exampleAPI_URL, function(res){
         console.log(res.statusCode); //get the status code
