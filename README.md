@@ -1,5 +1,5 @@
 # NodeJS Template File
-### included libraries : express, body-parser, ejs, lodash, mongoose
+### included libraries : express, body-parser, ejs, lodash, mongoose, dotenv
 ### include request methods: get, post, listen
 ---
 ### Initial project creation
@@ -28,7 +28,7 @@
       npm init
     ```
     ```bash
-      npm i express body-parser ejs lodash mongoose
+      npm i express body-parser ejs lodash mongoose dotenv
     ```
 ### other useful functions
 #### render specific ejs files in nodejs request function
@@ -74,6 +74,17 @@ res.render("filename", {<var1 in ejs>: <var1 in js>, <var2 in ejs>: <var2 in js>
     return variable/object;
    };
    ```
+ - export functions in bulk
+   ```javascript
+   function example1(){
+   }
+   function example2(){
+   }
+   module.exports = {
+    example1,
+    example2
+   }
+   ```
 #### get the value in url
 ```javascript
 app.get("/posts/:postName", function(req, res){
@@ -96,3 +107,33 @@ console.log(req.params.postName);
         console.log(foundItem.title);
     }
     ```
+#### use .env to hide private information(ex. API key)
+1. install dotenv package if have bot install already, and create a .env file
+   ```bash
+      npm i dotenv
+   ``` 
+   ```bash
+      touch .env
+   ```
+2. Store private information in .env
+   ```javascript
+     API_KEY = 00000000000
+   ```
+3. Calling private information in javascript file
+   ```javascript
+     require("dotenv").config();
+   ```
+   ```javascript
+     let example = process.env.API_KEY;
+   ```
+#### using https get request
+```javascript
+    const exampleAPI_URL = "https://api.exampleapi.com/key?=value";
+    https.get(exampleAPI_URL, function(res){
+        console.log(res.statusCode); //get the status code
+        res.on("data", function(data){
+            const weatherData = JSON.parse(data); // JSON.parse will convert the response data from hex format to json format
+            console.log(weatherData);
+        });
+    });
+```
