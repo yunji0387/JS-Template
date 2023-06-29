@@ -173,8 +173,57 @@ async function getInfoDB() {
 
 <a id="jquery_section"></a>
 ## JQuery Template File
-coming soon ...
+### Import jquery libraries in html
+- Include jquery cdn libraris
+```html
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+```
+- Include jquery custom js script file
+```html
+<script src="./<path>/<script file name>.js"></script>
+```
+### jquery ajax get method
+```javascript
+function functionName() {
+  // Fetch and process data
+  $.ajax({
+    url: "/<pathname>",
+    method: "GET",
+    async:false, //disallow concurrent running
+    success: function (data) {
+      function2Name(data);
+    },
+    error: function () {
+      console.log("An error occurred accessing stock info data");
+        function3Name();
+    },
+    complete: function () {
+      function4Name();
+    }
+  });
 
+  // Fetch and process data
+  $.ajax({
+    url: "/<pathname2>",
+    method: "GET",
+    async:false, //disallow concurrent running
+    success: function (data) {
+      function5Name(data);
+    },
+    error: function () {
+      console.log("An error occurred accessing stock info data");
+        function6Name();
+    },
+    complete: function () {
+      function7Name();
+    }
+  });
+}
+
+$(document).ready(function () {
+  setTimeout(functionName, 1000); // 1000 means delay for 1 second then call function "function"
+});
+```
 ---
 
 <a id="react_section"></a>
@@ -201,6 +250,10 @@ coming soon ...
       npm install react-scripts@latest
     ```
 ### React in JS file
+#### Import react js file in html
+```html
+<script src="./src/index.js" type="text/jsx"></script>
+```
 #### Import libraries in js file
 ```javascript
 import React from 'react';
