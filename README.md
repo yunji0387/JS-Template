@@ -1,8 +1,15 @@
 # JS Template File
 ### Table of Contents
+<details open>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+    
 1. [NodeJS Template](#node_section)
 2. [JQuery Template](#jquery_section)
 3. [ReactJS Template](#react_section)
+
+<!-- /MarkdownTOC -->
+</details>
 
 <a id="node_section"></a>
 ## NodeJS Template File
