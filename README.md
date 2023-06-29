@@ -174,6 +174,7 @@ async function getInfoDB() {
 <a id="jquery_section"></a>
 ## JQuery Template File
 coming soon ...
+
 ---
 
 <a id="react_section"></a>
@@ -199,3 +200,22 @@ coming soon ...
     ```bash
       npm install react-scripts@latest
     ```
+### React in JS file
+#### Import libraries in js file
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+```
+#### Inject code to an element (ex. div/h1/p)
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <h1>
+    Hello World
+  </h1>
+);
+
+```
