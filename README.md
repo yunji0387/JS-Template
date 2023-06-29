@@ -154,6 +154,21 @@ console.log(req.params.postName);
         });
     });
 ```
+#### connect to mongo server and call mongo find function
+```javascript
+async function getInfoDB() {
+  let result;
+  try {
+    await mongoose.connect("mongodb+srv://" + process.env.MONGO_USERNAME + ":" + process.env.MONGO_PS + "@cluster0.6gezmfg.mongodb.net/<db name>", { useNewURLParser: true });
+    result = await <collection name>.find({});
+    mongoose.connection.close();
+  } catch (err) {
+    console.error(err);
+    mongoose.connection.close();
+  }
+  return result;
+}
+```
 
 <a id="jquery_section"></a>
 ## JQuery Template File
