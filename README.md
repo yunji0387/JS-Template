@@ -2,7 +2,7 @@
 ### Table of Contents
 1. [NodeJS Template](#node_section)
 2. [JQuery Template](#jquery_section)
-3. ReactJS Template
+3. [ReactJS Template](#react_section)
 
 <a id="node_section"></a>
 ## NodeJS Template File
@@ -150,3 +150,8 @@ console.log(req.params.postName);
 
 <a id="jquery_section"></a>
 ## JQuery Template File
+coming soon ...
+
+<a id="react_section"></a>
+## React Template File
+coming soon ...
