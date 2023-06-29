@@ -169,11 +169,33 @@ async function getInfoDB() {
   return result;
 }
 ```
+---
 
 <a id="jquery_section"></a>
 ## JQuery Template File
 coming soon ...
+---
 
 <a id="react_section"></a>
 ## React Template File
-coming soon ...
+### Creating React App
+- In bash
+    ```bash
+      npx create-react-app <app name>
+    ```
+### Start development server
+- In bash located into the react app directory
+    ```bash
+      cd <app name>
+    ```
+    ```bash
+      npm start
+    ```
+### Upgrade React App version
+- In bash located into the react app directory
+    ```bash
+      cd <app name>
+    ```
+    ```bash
+      npm install react-scripts@latest
+    ```
