@@ -272,3 +272,18 @@ root.render(
 );
 
 ```
+#### Calling js variable in an element (ex. div/h1/p)
+```javascript
+import React from "react";
+
+function Footer() {
+  const currentYear = new Date().getFullYear();
+  return (
+    <footer>
+      <p>Copyright ⓒ {currentYear}</p>
+    </footer>
+  );
+}
+
+export default Footer;
+```
