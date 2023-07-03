@@ -352,6 +352,7 @@ root.render(
     
     export default App;
     ```
+---
 
 <a id="js_section"></a>
 ## JS Functions
