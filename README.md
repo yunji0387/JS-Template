@@ -343,6 +343,47 @@ const newNumbers = numbers.map( x => x * 2);
 // })
 const newNumber = numbers.find(num => num > 10);
 ```
+#### js Ternary Operator (It is an Expression)
+- Condition ? Do if True : Do if False
+- Example : isEmpty === true ? addFunction() : removeFunction()
+1. example 1 (In JavaScript)
+   ```javascript
+    function getFee(isMember) {
+      return (isMember ? '$2.00' : '$10.00');
+    }
+    
+    console.log(getFee(true));
+    // Expected output: "$2.00"
+    
+    console.log(getFee(false));
+    // Expected output: "$10.00"
+    
+    console.log(getFee(null));
+    // Expected output: "$10.00"
+    ``` 
+3. example 2 (In React JavaScript)
+   ```javascript
+    import React from "react";
+    import Login from "./Login";
+    
+    var isLoggedIn = false;
+    
+    const currentTime = new Date(2019, 11, 1, 9).getHours();
+    console.log(currentTime);
+    
+    function App() {
+      return (
+        <div className="container">
+          {/*Ternary Operator*/}
+          {isLoggedIn ? <h1>Hello</h1> : <Login />}
+          {/*AND Operator*/}
+          {currentTime > 12 && <h1>Why are you still working?</h1>}
+        </div>
+      );
+    }
+    
+    export default App;
+    ```
 #### js map function
 1. example 1
     ```javascript
