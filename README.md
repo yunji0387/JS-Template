@@ -346,6 +346,8 @@ const newNumber = numbers.find(num => num > 10);
 #### js Ternary Operator (It is an Expression)
 - Condition ? Do if True : Do if False
 - Example : isEmpty === true ? addFunction() : removeFunction()
+  - If we want one of the condition to do nothing, simply set it to null
+      - isEmpty === true ? addFunction() : null
 1. example 1 (In JavaScript)
    ```javascript
     function getFee(isMember) {
