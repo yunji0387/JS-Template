@@ -324,3 +324,131 @@ root.render(
 );
 
 ```
+#### js map function
+1. example 1
+    ```javascript
+    const array1 = [1, 4, 9, 16];
+    
+    // Pass a function to map
+    const map1 = array1.map(x => x * 2);
+    
+    console.log(map1);
+    // Expected output: Array [2, 8, 18, 32]
+    
+    ```
+2. example 2
+    ```javascript
+    // in emojipedia.js
+    const emojipedia = [
+      {
+        id: 1,
+        emoji: "💪",
+        name: "Tense Biceps",
+        meaning:
+          "“You can do that!” or “I feel strong!” Arm with tense biceps. Also used in connection with doing sports, e.g. at the gym."
+      },
+      {
+        id: 2,
+        emoji: "🙏",
+        name: "Person With Folded Hands",
+        meaning:
+          "Two hands pressed together. Is currently very introverted, saying a prayer, or hoping for enlightenment. Is also used as a “high five” or to say thank you."
+      },
+      {
+        id: 3,
+        emoji: "🤣",
+        name: "Rolling On The Floor, Laughing",
+        meaning:
+          "This is funny! A smiley face, rolling on the floor, laughing. The face is laughing boundlessly. The emoji version of “rofl“. Stands for „rolling on the floor, laughing“."
+      },
+      {
+        id: 4,
+        emoji: "🤓",
+        name: "Nerd Face",
+        meaning:
+          "Huge glasses, awkward smile and buck teeth. Used humorously or ironically for nerds or to express how smart you are. Stereotype of a nerd; a smart but funny-dressed person with social deficits."
+      }
+    ];
+    
+    export default emojipedia;
+    ```
+    ```javascript
+    // in App.js
+    import React from "react";
+    import Entry from "./Entry";
+    import emojipedia from "../emojipedia";
+    
+    function createEntry(emojiTerm) {
+      return (
+        <Entry
+          key={emojiTerm.id}
+          emoji={emojiTerm.emoji}
+          name={emojiTerm.name}
+          description={emojiTerm.meaning}
+        />
+      );
+    }
+    
+    function App() {
+      return (
+        <div>
+          <h1>
+            <span>emojipedia</span>
+          </h1>
+          <dl className="dictionary">{emojipedia.map(createEntry)}</dl>
+        </div>
+      );
+    }
+    
+    export default App;
+    ```
+#### js filter function
+```javascript
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
+#### js filter function
+```javascript
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
+#### js reduce function
+```javascript
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
+#### js find function (return the first element that satisfied the condition)
+```javascript
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
+#### js findIndex function (return the first element's index that satisfied the condition)
+```javascript
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
