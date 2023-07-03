@@ -328,6 +328,21 @@ root.render(
 
 <a id="js_section"></a>
 ## JS Functions
+#### js arrow function
+```javascript
+//Map -Create a new array by doing something with each item in an array.
+// const newNumbers = numbers.map(function (x) {
+//   return x * 2;
+// });
+// is same as
+const newNumbers = numbers.map( x => x * 2);
+
+//Find - find the first item that matches from an array.
+// const newNumber = numbers.find(function (num) {
+//   return num > 10;
+// })
+const newNumber = numbers.find(num => num > 10);
+```
 #### js map function
 1. example 1
     ```javascript
