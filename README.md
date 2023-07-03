@@ -325,6 +325,33 @@ root.render(
 );
 
 ```
+#### useState function
+- const [state, setState] = useState(initialState);
+    ```javascript
+    import React, { useState } from "react";
+    
+    function App() {
+      const [count, setCount] = useState(0);
+    
+      function increase() {
+        setCount(count + 1);
+      }
+    
+      function decrease() {
+        setCount(count - 1);
+      }
+    
+      return (
+        <div className="container">
+          <h1>{count}</h1>
+          <button onClick={decrease}>-</button>
+          <button onClick={increase}>+</button>
+        </div>
+      );
+    }
+    
+    export default App;
+    ```
 
 <a id="js_section"></a>
 ## JS Functions
@@ -346,8 +373,9 @@ const newNumber = numbers.find(num => num > 10);
 #### js Ternary Operator (It is an Expression)
 - Condition ? Do if True : Do if False
 - Example : isEmpty === true ? addFunction() : removeFunction()
-  - If we want one of the condition to do nothing, simply set it to null
+  - If we want one of the condition to do nothing, simply set it to null or use && operator
       - isEmpty === true ? addFunction() : null
+      - isEmpty === true && addFunction()
 1. example 1 (In JavaScript)
    ```javascript
     function getFee(isMember) {
