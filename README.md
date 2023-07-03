@@ -4,15 +4,16 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
     
-1. [NodeJS Template](#node_section)
-2. [JQuery Template](#jquery_section)
-3. [ReactJS Template](#react_section)
+1. [NodeJS Functions](#node_section)
+2. [JQuery Functions](#jquery_section)
+3. [ReactJS Functions](#react_section)
+4. [JS Functions](#js_section)
 
 <!-- /MarkdownTOC -->
 </details>
 
 <a id="node_section"></a>
-## NodeJS Template File
+## NodeJS Functions
 
 ### included libraries : express, body-parser, ejs, lodash, mongoose, dotenv
 ### include request methods: get, post, listen
@@ -172,7 +173,7 @@ async function getInfoDB() {
 ---
 
 <a id="jquery_section"></a>
-## JQuery Template File
+## JQuery Functions
 ### Import jquery libraries in html
 - Include jquery cdn libraris
 ```html
@@ -227,7 +228,7 @@ $(document).ready(function () {
 ---
 
 <a id="react_section"></a>
-## React Template File
+## React Functions
 ### Creating React App
 - In bash
     ```bash
@@ -324,6 +325,9 @@ root.render(
 );
 
 ```
+
+<a id="js_section"></a>
+## JS Functions
 #### js map function
 1. example 1
     ```javascript
@@ -402,15 +406,6 @@ root.render(
     
     export default App;
     ```
-#### js filter function
-```javascript
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-
-const result = words.filter(word => word.length > 6);
-
-console.log(result);
-// Expected output: Array ["exuberant", "destruction", "present"]
-```
 #### js filter function
 ```javascript
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
