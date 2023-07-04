@@ -352,6 +352,32 @@ root.render(
     
     export default App;
     ```
+#### Appending element into a state array
+```javascript
+import React, { useState } from "react";
+
+function App() {
+  const [inputText, setInputText] = useState("");
+  const [items, setItems] = useState([]);
+
+  function handleChange(event) {
+    const newValue = event.target.value;
+    setInputText(newValue);
+  }
+
+  function addItem() {
+    setItems(prevItems => {
+      return [...prevItems, inputText];
+    });
+    setInputText("");
+  }
+
+  return (...);
+}
+
+export default App;
+
+```
 ---
 
 <a id="js_section"></a>
