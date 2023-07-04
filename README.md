@@ -371,6 +371,25 @@ const newNumbers = numbers.map( x => x * 2);
 // })
 const newNumber = numbers.find(num => num > 10);
 ```
+#### js es6 Spread Operator
+```javascript
+ const citrus = ["Lime", "Lemon", "Orange"];
+ const fruits = ["Apple", ...citrus, "Banana", "Coconut"];
+
+ const fullName = {
+   fName: "James",
+   lName: "Bond"
+ };
+
+ const user = {
+   ...fullName,
+   id: 1,
+   username: "jamesbond007"
+ };
+
+ console.log(user);
+// console : Object {fName: "James", lName: "Bond", id: 1, username: "jamesbond007"}
+```
 #### js Ternary Operator (It is an Expression)
 - Condition ? Do if True : Do if False
 - Example : isEmpty === true ? addFunction() : removeFunction()
