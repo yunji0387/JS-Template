@@ -354,9 +354,6 @@ root.render(
     ```
 #### Appending element into a state array
 ```javascript
-import React, { useState } from "react";
-
-function App() {
   const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);
 
@@ -371,12 +368,6 @@ function App() {
     });
     setInputText("");
   }
-
-  return (...);
-}
-
-export default App;
-
 ```
 ---
 
