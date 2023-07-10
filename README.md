@@ -369,6 +369,45 @@ root.render(
     setInputText("");
   }
 ```
+#### Adding link to a react component
+1. First install react-router-dom
+    ```bash
+    npm install react-router-dom
+    ```
+2. In index.js import BrowserRouter
+    ```javascript
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    import { BrowserRouter } from 'react-router-dom'
+    import App from './App';
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+    );
+    ```
+4. Finally add <Link> to the desired react component
+   ```javascript
+    import React from 'react';
+    import { Link } from 'react-router-dom';
+    import './GameCard.css';
+    
+    const GameCard = (props) => {
+      return (
+        <Link to='/about' className="game-card">
+          <img className="game-card__image" src={props.imageUrl} alt={props.imgTitle} />
+          <div className="game-card__details">
+            <h2 className="game-card__title">{props.title}</h2>
+            <p className="game-card__description">{props.description}</p>
+          </div>
+        </Link>
+      );
+    };
+    
+    export default GameCard;
+```
 ---
 
 <a id="js_section"></a>
