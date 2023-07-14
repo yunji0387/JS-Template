@@ -407,7 +407,7 @@ root.render(
     };
     
     export default GameCard;
-```
+    ```
 ---
 
 <a id="js_section"></a>
