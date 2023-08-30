@@ -609,3 +609,11 @@ const isLargeNumber = (element) => element > 13;
 console.log(array1.findIndex(isLargeNumber));
 // Expected output: 3
 ```
+
+#### js shallow copy & deep copy
+```javascript
+const dude = { name: 'jeff', weapons: { main: 'sword', alt: 'bat' } };
+const bruh = { ...dude }; // shallow copy, nested objects still maintain reference to their original object
+const bruh2 =  JSON.parse(JSON.stringify(dude)); // deep copy method 1, turn object to string then turn it back to json
+const bruh3 = structuredClone(dude); // deep copy method 2
+```
